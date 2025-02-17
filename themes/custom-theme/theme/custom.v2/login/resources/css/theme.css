@@ -1,0 +1,207 @@
+/* Variables globales */
+:root {
+    --color-start: #7AF7B7;
+    --color-end: #0DA559;
+    --text-color: #4A4A4A;
+    --border-color: #4A4A4A;
+    --focus-shadow: rgba(33, 33, 33, 0.25);
+}
+
+/* Fondo con gradiente */
+body {
+    background: radial-gradient(circle, var(--color-start) 10%, var(--color-end) 90%);
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+    height: 100vh;
+    overflow: hidden; /* Asegura que el fondo se mantenga sin scroll */
+}
+
+.background-logo {
+    position: fixed;
+    top: 100%;
+    left: 100%;
+    width: 200vw; /* Doble del ancho de la pantalla */
+    height: 200vh; /* Doble de la altura de la pantalla */
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.7;
+    mix-blend-mode: multiply;
+    z-index: -1;
+}
+
+/* Contenedor del login */
+#kc-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Formulario */
+.custom-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 300px; /* Ajustado para alinear con los inputs */
+    width: 100%;
+    max-height: 566px;
+    height: 100%;
+}
+
+/* Logo */
+.login-logo img {
+    width: 80px; /* Reducción del tamaño del logo */
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+
+/* Título */
+.login-title {
+    font-size: 16px;  /* Ajustado a 18px */
+    font-weight: 400;  /* Ajustado a 400 (Regular) */
+    line-height: 24px;  /* Ajustado a 24px */
+    color: #333;
+    text-align: center; /* Asegura alineación centrada */
+    margin-top:-10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+/* Campos de entrada */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+    position: relative;
+}
+
+/* Etiqueta */
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.input-label {
+    margin-left: 20px;
+    color: var(--text-color);
+}
+
+/* Ajustando el ancho de los inputs */
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    font-size: 14px;
+    box-sizing: border-box;
+    height: 110%;
+    transition: all 0.2s ease-in-out;
+    color: var(--text-color);
+}
+
+/* Estados del input */
+.input-group input:hover {
+    border-color: black;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: black;
+    box-shadow: 0 0 8px var(--focus-shadow);
+}
+
+/* Estado Typing */
+.input-group input:focus::placeholder {
+    color: transparent;
+}
+
+/* Estado Entered */
+.input-group input:valid {
+    border-color: black;
+}
+
+/* Enlace de contraseña */
+.forgot-password {
+    text-align: right;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    display: block; /* Asegura que se muestre */
+}
+
+.forgot-password a {
+    font-size: 14px;
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+/* Botón de inicio de sesión */
+/* Botón de inicio de sesión */
+.button-container {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.login-button {
+    width: 100%;
+    background: black;
+    color: #7AF7B7;
+    padding: 12px 0;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0px;
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Mejora la nitidez de la fuente */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.login-button:hover {
+    background: #333;
+}
+
+
+/* Ajuste final del enlace de contraseña */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.forgot-password a {
+    font-size: 14px;
+    color: var(--text-color);
+    text-decoration: underline;
+    display: inline-block;
+}
+input[type="password"] {
+    -webkit-text-security: disc; /* Algunos navegadores permiten 'none', 'circle' o 'square' */
+}
+input[type="password"] {
+    font-family: Open Sans;
+    font-size: 16px;
+    letter-spacing: 3px; /* Ajusta el espaciado si es necesario */ 
+}
+.background-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%; /* Ajusta el tamaño según sea necesario */
+    max-width: 700px;
+    opacity: 0.9;
+    mix-blend-mode: multiply;
+    z-index: -1; /* Para que esté detrás del formulario */
+}
